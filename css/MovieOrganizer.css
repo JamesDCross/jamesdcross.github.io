@@ -62,20 +62,20 @@ p {
 .light {
   font-weight: 400;
 }
-.navbar-custom {
+.navbar-default {
   margin-bottom: 0;
   border-bottom: 5px solid rgba(255, 255, 255, 0.2);
  
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-color: white;
 }
 
 
 
 
 .navbar-custom .navbar-toggle {
-  color: white;
+  color: black;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
 }
@@ -123,32 +123,16 @@ p {
     /*initial navbar border*/
     border-bottom: 1px solid #696969;
     letter-spacing: 1px;
-    background: transparent;
-    -webkit-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
-    -moz-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
-    /*changed navbar fade in speed here*/
-    transition: background 0.1s ease-in-out, padding 0.2s ease-in-out;
+    background: black;
+   
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: white;
+    background: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
-.intro {
-  display: table;
-  width: 100%;
-  height: auto;
-  padding: 100px 0;
-  text-align: center;
-  color: black;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
+
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
@@ -171,42 +155,7 @@ p {
     font-size: 26px;
   }
 }
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  font-size: 40px;
-  color: white;
-  background: transparent;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-}
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
