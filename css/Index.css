@@ -15,7 +15,7 @@ body {
   /*wierd space on side of page --just make picture bigger*/
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 html {
@@ -200,7 +200,18 @@ p {
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
+/*wierd white gap on side was coming from bootstrap row*/
+
+ 
 }
+
+ .row {
+  padding-right: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
 
 
 
