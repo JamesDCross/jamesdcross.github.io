@@ -190,7 +190,9 @@ p {
 @media (max-width: 768px) {
   .intro {
     height: 50%;
+    width: 100%;
     padding: 0;
+    background: url(../img/intro-bg.jpg) no-repeat fixed center scroll;
   }
   .intro .intro-body .brand-heading {
     font-size: 100px;
