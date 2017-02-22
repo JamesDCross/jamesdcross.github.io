@@ -186,6 +186,19 @@ p {
     font-size: 26px;
   }
 }
+/*this makes above pointless*/
+@media (max-width: 768px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+}
 
 
 
