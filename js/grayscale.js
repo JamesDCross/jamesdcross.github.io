@@ -8,10 +8,14 @@
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        /*this is to match @media 768, WARNING: not IE9 compatible*/ 
+        if (window.matchMedia('(min-width: 768px)').matches){
         $(".navbar-custom a").css('color', 'black');
+        }
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        $(".navbar-custom a").css('color', 'white');
+        
+        $(".navbar-custom a" ).css('color', 'white');
     }
 }
 
@@ -25,7 +29,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 700, 'easeInOutExpo');//set it tp 600 snappier
+        }, 700, 'easeInOutExpo');//set it to 600 snappier
         event.preventDefault();
     });
 });
