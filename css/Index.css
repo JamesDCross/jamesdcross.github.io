@@ -192,7 +192,7 @@ p {
     height: 50%;
     width: 100%;
     padding: 0;
-    background: url(../img/intro-bg.jpg) no-repeat fixed center scroll;
+    background: url(../img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
   }
   .intro .intro-body .brand-heading {
     font-size: 100px;
