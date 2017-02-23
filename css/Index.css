@@ -72,7 +72,7 @@ p {
   /*border-bottom: 5px solid rgba(255, 255, 255, 0.2);*/
  
   text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: black;
 }
 
@@ -187,7 +187,7 @@ p {
   }
 }
 /*this makes above pointless*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .intro {
     height: 100%;
     width: 100%;
