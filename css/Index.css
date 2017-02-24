@@ -35,14 +35,19 @@ h6 {
   letter-spacing: 1px;
 }
 
+
+
 h2{
    /* margin-top: 0px;*/
     font-family: 'Raleway', sans-serif;
     color:rgb(80, 80, 80);
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 700; /*700px is different*/
     line-height: 24px;
     text-transform: uppercase; 
+    /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;*/
 }
 
 
