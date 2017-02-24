@@ -9,38 +9,27 @@
     <script src="TemplateData/UnityProgress.js"></script>
   </head>
   <body class="template">
-     <div ><p>Arrow keys move, [Z] punch, [X] kick, [Esc] pause. We recommend a game controller over a keyboard.</p>
-      </div>
     <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px" ></canvas>
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
       <br>
       <div class="logo"></div>
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
       <div class="title">Shodo</div>
     </div>
-
     <script type='text/javascript'>
   var Module = {
-    TOTAL_MEMORY: 1073741824, 
+    TOTAL_MEMORY: 1073741824,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
     backgroundColor: "#222C36",
     splashStyle: "Light",
-    dataUrl: "Release/WebGlDemo.data",
-    codeUrl: "Release/WebGlDemo.js",
-    asmUrl: "Release/WebGlDemo.asm.js",
-    memUrl: "Release/WebGlDemo.mem",
+    dataUrl: "Release/WebGlDemolowQuality.data",
+    codeUrl: "Release/WebGlDemolowQuality.js",
+    asmUrl: "Release/WebGlDemolowQuality.asm.js",
+    memUrl: "Release/WebGlDemolowQuality.mem",
   };
 </script>
-
-<style>
-
-
-</style>
-
 <script src="Release/UnityLoader.js"></script>
 
   </body>
-  
- 
 </html>
