@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment -->
+<html class="turbolinks-progress-bar" lang="en"><head prefix="og: http://ogp.me/ns#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="Forking in progress · James Cross / FatNinja" property="og:title">
+<meta content="GitLab Community Edition" property="og:description">
+<meta content="https://longitude.otago.ac.nz/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="og:image">
+<meta content="https://longitude.otago.ac.nz/jcross/FatNinja/import" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="Forking in progress · James Cross / FatNinja" property="twitter:title">
+<meta content="GitLab Community Edition" property="twitter:description">
+<meta content="https://longitude.otago.ac.nz/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="twitter:image">
+
+<title>Game Design Document</title>
+<meta content="GitLab Community Edition" name="description">
+<link rel="shortcut icon" type="image/x-icon" href="https://longitude.otago.ac.nz/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico">
+<!--added for buttons-->
+<!--<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+<link rel="stylesheet" media="all" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/application-54cb0f56610bfd324906db1c329c494e34c2951553f26265781dcbb45f9a558e.css">
+<link rel="stylesheet" media="print" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/print-9c3a1eb4a2f45c9f3d7dd4de03f14c2e6b921e757168b595d7f161bbc320fc05.css">
+<script src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/application-45fc1d1d095dde0aabc9aca397f4c9e26315d356c32f6cf34a1e31438eff0b57.js.download"></script><style>html.turbolinks-progress-bar::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #0076ff;
+  height: 3px;
+  opacity: 0.99;
+  width: 0%;
+  transition: width 0ms ease-out, opacity 0ms ease-in;
+  transform: translate3d(0,0,0);
+}</style>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="HzoZW49RTJfvzhR9MyMfebi6Hly1LNzRO6vo1vbrYz2KKkR8U1PcoL43SV0kkw8jJKzpOuNey4CFahI3DSFxYg==">
+<meta content="origin-when-cross-origin" name="referrer">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<meta content="#474D57" name="theme-color">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://longitude.otago.ac.nz/assets/touch-icon-iphone-5a9cee0e8a51212e70b90c87c12f382c428870c0ff67d1eb034d884b78d2dae7.png">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://longitude.otago.ac.nz/assets/touch-icon-ipad-a6eec6aeb9da138e507593b464fdac213047e49d3093fc30e90d9a995df83ba3.png" sizes="76x76">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://longitude.otago.ac.nz/assets/touch-icon-iphone-retina-72e2aadf86513a56e050e7f0f2355deaa19cc17ed97bbe5147847f2748e5a3e3.png" sizes="120x120">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://longitude.otago.ac.nz/assets/touch-icon-ipad-retina-8ebe416f5313483d9c1bc772b5bbe03ecad52a54eba443e5215a22caed2a16a2.png" sizes="152x152">
+<link color="rgb(226, 67, 41)" href="https://longitude.otago.ac.nz/assets/logo-d36b5212042cebc89b96df4bf6ac24e43db316143e89926c0db839ff694d2de4.svg" rel="mask-icon">
+<meta content="/assets/msapplication-tile-1196ec67452f618d39cdd85e2e3a542f76574c071051ae7effbfde01710eb17d.png" name="msapplication-TileImage">
+<meta content="#30353E" name="msapplication-TileColor">
+
+
+
+
+</head>
+
+<body class="ui_charcoal" data-group="" data-page="projects:wikis:show" data-project="FatNinja">
+<script>
+//<![CDATA[
+window.gon={};gon.api_version="v3";gon.default_avatar_url="https:\/\/longitude.otago.ac.nz\/assets\/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=10;gon.relative_url_root="";gon.shortcuts_path="\/help\/shortcuts";gon.user_color_scheme="white";gon.award_menu_url="\/emojis";gon.katex_css_url="\/assets\/katex-e46cafe9c3fa73920a7c2c063ee8bb0613e0cf85fd96a3aea25f8419c4bfcfba.css";gon.katex_js_url="\/assets\/katex-04bcf56379fcda0ee7c7a63f71d0fc15ffd2e014d017cd9d51fd6554dfccf40a.js";gon.current_user_id=96;gon.current_username="jcross";
+//]]>
+</script>
+<script>
+  window.project_uploads_path = "/rcrimp/FatNinja/uploads";
+  window.preview_markdown_path = "/rcrimp/FatNinja/wikis/Assignment/preview_markdown";
+</script>
+
+<header class="navbar navbar-fixed-top navbar-gitlab with-horizontal-nav">
+<a class="sr-only gl-accessibility" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#content-body" tabindex="1">Skip to content</a>
+<div class="container-fluid">
+
+<div class="header-content">
+<button aria-label="Toggle global navigation" class="side-nav-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-bars"></i>
+</button>
+<button class="navbar-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-ellipsis-v"></i>
+</button>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="hidden-sm hidden-xs">
+<div class="has-location-badge search search-form">
+<form class="navbar-form" action="https://longitude.otago.ac.nz/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓"><div class="search-input-container">
+<div class="location-badge">This project</div>
+<div class="search-input-wrap">
+<div class="dropdown" data-url="/search/autocomplete">
+<input type="search" name="search" id="search" placeholder="Search" class="search-input dropdown-menu-toggle no-outline js-search-dashboard-options disabled" spellcheck="false" tabindex="1" autocomplete="off" data-toggle="dropdown" data-issues-path="https://longitude.otago.ac.nz/dashboard/issues" data-mr-path="https://longitude.otago.ac.nz/dashboard/merge_requests" value="">
+<div class="dropdown-menu dropdown-select">
+<div class="dropdown-content"><ul>
+<li>
+<a class="is-focused dropdown-menu-empty-link">
+Loading...
+</a>
+</li>
+</ul>
+</div><div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<i class="search-icon"></i>
+<i class="clear-icon js-clear-input"></i>
+</div>
+</div>
+</div>
+<input type="hidden" name="group_id" id="group_id" class="js-search-group-options">
+<input type="hidden" name="project_id" id="search_project_id" value="276" class="js-search-project-options" data-project-path="FatNinja" data-name="FatNinja" data-issues-path="/rcrimp/FatNinja/issues" data-mr-path="/rcrimp/FatNinja/merge_requests">
+<input type="hidden" name="scope" id="scope" value="wiki_blobs">
+<input type="hidden" name="repository_ref" id="repository_ref">
+
+
+
+<div class="search-autocomplete-opts hide" data-autocomplete-path="/search/autocomplete" data-autocomplete-project-id="276"></div>
+</form></div>
+
+</li>
+<li class="visible-sm visible-xs">
+<a title="Search" aria-label="Search" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://longitude.otago.ac.nz/search"><i class="fa fa-search"></i>
+</a></li>
+<li>
+<a title="Todos" aria-label="Todos" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://longitude.otago.ac.nz/dashboard/todos"><i class="fa fa-bell fa-fw"></i>
+<span class="badge hidden todos-pending-count">
+0
+</span>
+</a></li>
+<li class="header-user dropdown">
+<a class="header-user-dropdown-toggle" data-toggle="dropdown" href="https://longitude.otago.ac.nz/jcross"><img width="26" height="26" class="header-user-avatar" src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/fb7840851e190b4697e20135d31b3e58" alt="Fb7840851e190b4697e20135d31b3e58?s=52&amp;d=identicon">
+<i class="fa fa-caret-down"></i>
+</a><div class="dropdown-menu-nav dropdown-menu-align-right">
+<ul>
+<li>
+<a class="profile-link" aria-label="Profile" data-user="jcross" href="https://longitude.otago.ac.nz/jcross">Profile</a>
+</li>
+<li>
+<a aria-label="Settings" href="https://longitude.otago.ac.nz/profile">Settings</a>
+</li>
+<li>
+<a aria-label="Help" href="https://longitude.otago.ac.nz/help">Help</a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="sign-out-link" aria-label="Sign out" rel="nofollow" data-method="delete" href="https://longitude.otago.ac.nz/users/sign_out">Sign out</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<h1 class="title"><a href="https://longitude.otago.ac.nz/rcrimp">Reuben Crimp</a> / <a class="project-item-select-holder" href="https://longitude.otago.ac.nz/rcrimp/FatNinja">FatNinja</a><button name="button" type="button" class="dropdown-toggle-caret js-projects-dropdown-toggle" aria-label="Toggle switch project dropdown" data-target=".js-dropdown-menu-projects" data-toggle="dropdown" data-order-by="last_activity_at"><i class="fa fa-chevron-down"></i></button></h1>
+<div class="header-logo">
+<a class="home" title="Dashboard" id="logo" href="https://longitude.otago.ac.nz/"><svg width="36" height="36" class="tanuki-logo">
+  <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+  <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+  <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+  <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+  <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+  <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+  <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+</svg>
+
+</a></div>
+<div class="js-dropdown-menu-projects">
+<div class="dropdown-menu dropdown-select dropdown-menu-projects">
+<div class="dropdown-title"><span>Go to a project</span><button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i class="fa fa-times dropdown-menu-close-icon"></i></button></div>
+<div class="dropdown-input"><input type="search" id="" class="dropdown-input-field" placeholder="Search your projects" autocomplete="off" value=""><i class="fa fa-search dropdown-input-search"></i><i role="button" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i></div>
+<div class="dropdown-content"></div>
+<div class="dropdown-loading"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+</div>
+
+</div>
+</div>
+</header>
+
+<script>
+  var findFileURL = "/rcrimp/FatNinja/find_file/master";
+</script>
+
+
+<div class="page-gutter page-with-sidebar right-sidebar-expanded wiki-sidebar">
+<div class="sidebar-wrapper nicescroll">
+<div class="sidebar-action-buttons">
+<div class="nav-header-btn toggle-nav-collapse" title="Open/Close">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-bars"></i>
+</div>
+<div class="nav-header-btn pin-nav-btn has-tooltip  js-nav-pin" data-container="body" data-placement="right" title="" data-original-title="Pin navigation">
+<span class="sr-only">Toggle navigation pinning</span>
+<i class="fa fa-fw fa-thumb-tack"></i>
+</div>
+</div>
+<div class="nav-sidebar" style="overflow: hidden; outline: none;" tabindex="9">
+<ul class="nav">
+<li class="active home"><a title="Projects" class="dashboard-shortcuts-projects" href="https://longitude.otago.ac.nz/dashboard/projects"><span>
+Projects
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-activity" title="Activity" href="https://longitude.otago.ac.nz/dashboard/activity"><span>
+Activity
+</span>
+</a></li><li class=""><a title="Groups" href="https://longitude.otago.ac.nz/dashboard/groups"><span>
+Groups
+</span>
+</a></li><li class=""><a title="Milestones" href="https://longitude.otago.ac.nz/dashboard/milestones"><span>
+Milestones
+</span>
+</a></li><li class=""><a title="Issues" class="dashboard-shortcuts-issues" href="https://longitude.otago.ac.nz/dashboard/issues?assignee_id=96"><span>
+Issues
+<span class="count">0</span>
+</span>
+</a></li><li class=""><a title="Merge Requests" class="dashboard-shortcuts-merge_requests" href="https://longitude.otago.ac.nz/dashboard/merge_requests?assignee_id=96"><span>
+Merge Requests
+<span class="count">0</span>
+</span>
+</a></li><li class=""><a title="Snippets" href="https://longitude.otago.ac.nz/dashboard/snippets"><span>
+Snippets
+</span>
+</a></li><a title="About GitLab CE" class="about-gitlab" href="https://longitude.otago.ac.nz/help"><span>
+About GitLab CE
+</span>
+</a></ul>
+</div>
+
+<div id="ascrail2009" class="nicescroll-rails nicescroll-rails-vr" style="width: 7px; z-index: 1000; cursor: default; position: absolute; top: 50px; left: 213px; height: 851px; touch-action: none; display: none;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; touch-action: none;"></div></div><div id="ascrail2009-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 7px; z-index: 1000; top: 894px; left: 0px; position: absolute; cursor: default; display: none;"><div class="nicescroll-cursors" style="position: absolute; top: 0px; height: 5px; width: 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div></div>
+<div class="layout-nav">
+<div class="container-fluid">
+<div class="controls">
+<div class="dropdown project-settings-dropdown">
+<a class="dropdown-new btn btn-default" data-toggle="dropdown" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#" id="project-settings-button">
+<i class="fa fa-cog"></i>
+<i class="fa fa-caret-down"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-align-right">
+<li class=""><a title="Members" class="team-tab tab" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/settings/members"><span>
+Members
+</span>
+</a></li><li class=""><a title="Deploy Keys" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/deploy_keys"><span>
+Deploy Keys
+</span>
+</a></li><li class=""><a title="Integrations" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/settings/integrations"><span>
+Integrations
+</span>
+</a></li><li class=""><a title="Protected Branches" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/protected_branches"><span>
+Protected Branches
+</span>
+</a></li><li class=""><a title="Runners" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/runners"><span>
+Runners
+</span>
+</a></li><li class=""><a title="Variables" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/variables"><span>
+Variables
+</span>
+</a></li><li class=""><a title="Triggers" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/triggers"><span>
+Triggers
+</span>
+</a></li><li class=""><a title="CI/CD Pipelines" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/pipelines/settings"><span>
+CI/CD Pipelines
+</span>
+</a></li>
+<li class="divider"></li>
+<li>
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/edit">Edit Project
+</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-control scrolling-tabs-container">
+<div class="fade-left">
+<i class="fa fa-angle-left"></i>
+</div>
+<div class="fade-right">
+<i class="fa fa-angle-right"></i>
+</div>
+<ul class="nav-links scrolling-tabs">
+<li class="home"><a title="Project" class="shortcuts-project" href="https://longitude.otago.ac.nz/rcrimp/FatNinja"><span>
+Project
+</span>
+</a></li><li class=""><a title="Activity" class="shortcuts-project-activity" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/activity"><span>
+Activity
+</span>
+</a></li><li class=""><a title="Repository" class="shortcuts-tree" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/tree/master"><span>
+Repository
+</span>
+</a></li><li class=""><a title="Pipelines" class="shortcuts-pipelines" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/pipelines"><span>
+Pipelines
+</span>
+</a></li><li class=""><a title="Graphs" class="shortcuts-graphs" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/graphs/master"><span>
+Graphs
+</span>
+</a></li><li class=""><a title="Issues" class="shortcuts-issues" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/issues"><span>
+Issues
+<span class="badge count issue_counter">0</span>
+</span>
+</a></li><li class=""><a title="Merge Requests" class="shortcuts-merge_requests" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/merge_requests"><span>
+Merge Requests
+<span class="badge count merge_counter">0</span>
+</span>
+</a></li><li class="active"><a title="Wiki" class="shortcuts-wiki" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/home"><span>
+Wiki
+</span>
+</a></li><li class="hidden">
+<a title="Network" class="shortcuts-network" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/network/master">Network
+</a></li>
+<li class="hidden">
+<a class="shortcuts-new-issue" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/issues/new">Create a new issue
+</a></li>
+<li class="hidden">
+<a title="Builds" class="shortcuts-builds" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/builds">Builds
+</a></li>
+<li class="hidden">
+<a title="Commits" class="shortcuts-commits" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/commits/master">Commits
+</a></li>
+<li class="hidden">
+<a title="Issue Boards" class="shortcuts-issue-boards" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/boards">Issue Boards</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="content-wrapper page-with-layout-nav">
+
+<div class="alert-wrapper">
+
+
+<div class="flash-container flash-container-page">
+</div>
+
+
+</div>
+<div class=" ">
+<div class="content" id="content-body">
+<div class="container-fluid container-limited">
+<div class="wiki-page-header has-sidebar-toggle">
+<button class="btn btn-default sidebar-toggle js-sidebar-wiki-toggle" role="button" type="button">
+<i class="fa fa-angle-double-left"></i>
+</button>
+<div class="nav-text">
+<h2 class="wiki-page-title">Assignment</h2>
+<span class="wiki-last-edit-by">
+Last edited by
+<strong>
+James Cross
+</strong>
+<time class="js-timeago" title="" datetime="2017-01-20T01:30:12Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Jan 20, 2017 2:30pm GMT+1300" data-timeago-rendered="true">a month ago</time>
+</span>
+</div>
+<div class="nav-controls">
+<a class="add-new-wiki btn btn-new" data-toggle="modal" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#modal-new-wiki">New Page
+</a><a class="btn" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment/history">Page History
+</a><a class="btn" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment/edit">Edit
+</a>
+</div>
+</div>
+<div class="wiki-holder prepend-top-default append-bottom-default">
+<div class="wiki">
+<h1 dir="auto">
+<a id="user-content-team-organisation" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#team-organisation" aria-hidden="true"></a>Team Organisation</h1>
+
+<h2 dir="auto">
+<a id="user-content-golden-gorilla-studios" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#golden-gorilla-studios" aria-hidden="true"></a>Golden Gorilla Studios</h2>
+
+<p dir="auto"><strong>James Cross</strong></p>
+
+<p dir="auto">• Lead game designer</p>
+
+<p dir="auto">• Sound designer</p>
+
+<p dir="auto">• Writer</p>
+
+<p dir="auto"><strong>Albert Gao</strong></p>
+
+<p dir="auto">• Lead Programmer</p>
+
+<p dir="auto">• AI expert</p>
+
+<p dir="auto"><strong>Reuben Crimp</strong></p>
+
+<p dir="auto">• Lead artist</p>
+
+<p dir="auto">• Programmer</p>
+
+<p dir="auto"><strong>Troy Negus</strong></p>
+
+<p dir="auto">• Programmer</p>
+
+<p dir="auto">• Designer</p>
+
+<h2 dir="auto">
+<a id="user-content-core-concept" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#core-concept" aria-hidden="true"></a>Core Concept</h2>
+
+<p dir="auto">Fat ninja is a top down brawler where you fight your way through a Japanese palace and defeat a feudal lord to regain your honour. To do this you will make use of a combo system to defeat your enemies. Powerful sumo wrestler combos can be achieved by collecting food and entering the sumo state.</p>
+
+<h2 dir="auto">
+<a id="user-content-theme" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#theme" aria-hidden="true"></a>Theme</h2>
+
+<p dir="auto">The theme is Shibō’s redemption/revenge and the whole game ties into this. When Shibō is at his strongest it is because he has regained his sumo weight (that he lost when he had to become a ninja). The game levels are him literally regaining his honour by defeating the lord that wronged him. The brutal nature of the combat reflects his burning anger over what has been done to him.</p>
+
+<h1 dir="auto">
+<a id="user-content-game-overview" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#game-overview" aria-hidden="true"></a>Game Overview</h1>
+
+<p dir="auto"><strong>Story</strong></p>
+
+<p dir="auto">In Shibō’s village the greatest honour was to become a sumo wrestler. Shibō trained his whole life. He ate only the fattiest meats, laughed at vegetables and trained by pushing only the heaviest oxen from the family paddock. Not all was well however, lord Sukinī wanted his son to be the village champion. He poisoned Shibō’s chankonabe the night before the great tournament and he could not compete. Shibō’s family received great shame. He was forced to the lowly position of ninja, his parents wept as he lost much weight. But Shibō vowed he would one day reclaim his honour…</p>
+
+<p dir="auto"><strong>Game</strong></p>
+
+<p dir="auto">The game is generated from the above story and it begins with Shibō breaking into Sukini’s palace to get his revenge. He must fight his way through the guards to Sukini’s (end game boss) chamber. </p>
+
+<p dir="auto">Aside from the standard punches and kicks indicative of a brawler, the main fighting mechanic consists of combos. An example would be the spinning kick combo initiated by pressing the sequence BBA on the controller. </p>
+
+<p dir="auto">Combos can be chained together, if one combo is performed after the first within the correct timeframe. Chaining combos together and executing more complex combo types, gives the player a higher score as well as doing more damage to enemies. </p>
+
+<p dir="auto">The second level to the fighting mechanics consists of a “sumo state”. Throughout each level there are bowls of rice, these pick ups can be accumulated and used to initiate the sumo state. In this state you have more powerful attacks and combos. For example Shibō can roll into a ball (of fat basically) crushing enemies in his wake. Shibō will take on the appearance of the sumo wrestler he longs to be in this state.</p>
+
+<h2 dir="auto">
+<a id="user-content-what-makes-the-game-fun" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#what-makes-the-game-fun" aria-hidden="true"></a>What makes the game fun</h2>
+
+<p dir="auto">The challenge of pulling off combos and chaining them together makes every encounter interesting. The varied level design and different enemy types keeps the game fresh. The story hooks the player into the game.</p>
+
+<h2 dir="auto">
+<a id="user-content-uniqueness" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#uniqueness" aria-hidden="true"></a>Uniqueness</h2>
+
+<p dir="auto">There are very few top down brawler games, they are usually side scrolling. A ninja that longs to be a sumo wrestler is an original hook. Introducing combos usually used in fighting games into brawler as the main mechanic is a relatively unique idea.</p>
+
+<h2 dir="auto">
+<a id="user-content-goals" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#goals" aria-hidden="true"></a>Goals</h2>
+
+<p dir="auto">• Fluidity in combo chaining</p>
+
+<p dir="auto">• Realistic enemy AI</p>
+
+<p dir="auto">• Balanced difficulty</p>
+
+<p dir="auto">• Enemy group AI</p>
+
+<p dir="auto">• Well defined enemy types that work within the context of the game</p>
+
+<p dir="auto">• A game that is fun that a player can pick up and play, accessible</p>
+
+<p dir="auto">• Remove unnecessary features through testing</p>
+
+<p dir="auto">• An engaging boss battle</p>
+
+<h2 dir="auto">
+<a id="user-content-non-goals" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#non-goals" aria-hidden="true"></a>Non-Goals</h2>
+
+<p dir="auto">• Keep combo types to the bare minimum</p>
+
+<p dir="auto">• Keep level design simple</p>
+
+<p dir="auto">• Keep mechanics to the bare minimum</p>
+
+<p dir="auto">• Don’t add any more areas to the game</p>
+
+<p dir="auto">• Don’t add any new features to the game</p>
+
+<h2 dir="auto">
+<a id="user-content-feature-list" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#feature-list" aria-hidden="true"></a>Feature list</h2>
+
+<p dir="auto">• Combos</p>
+
+<p dir="auto">• Sumo state</p>
+
+<p dir="auto">• Food Pickups</p>
+
+<p dir="auto">• Story</p>
+
+<p dir="auto">• Final Boss</p>
+
+<p dir="auto">• Enemy Group AI</p>
+
+<p dir="auto">• Different enemy types</p>
+
+<h2 dir="auto">
+<a id="user-content-aesthetic" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#aesthetic" aria-hidden="true"></a>Aesthetic</h2>
+
+<p dir="auto">The game is set in a pixel art version of feudal japan, the enemy design and architecture of the palace are defined by this setting. The colour palette will use vibrant colours to attract the player’s eye. </p>
+
+<p dir="auto">The game will be quite bloody so there will be a lot of red in any given scene. This  means the backgrounds will have to use a colour palette that contrasts red. Animations will be fluid, expressive and over the top to enhance the action. This is a 2D game and harkens back to a more arcade style in it's look and feel. Enemies will react strongly to being hit and cartoon text will be displayed on screen.</p>
+
+<h2 dir="auto">
+<a id="user-content-risks" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#risks" aria-hidden="true"></a>Risks</h2>
+
+<p dir="auto">• The banquet hall level, co-ordinating a lot of  enemies in one scene</p>
+
+<p dir="auto">• Making the game challenging but not to hard, tuning the game</p>
+
+<p dir="auto">• Anticipating player behavior, directing the player </p>
+
+<p dir="auto">• Balancing the enemies damage output versus the players damage capability</p>
+
+<p dir="auto">• We have to much content to make in four weeks</p>
+
+<p dir="auto">• Animations</p>
+
+<p dir="auto">• Soundtrack suiting the graphics/game </p>
+
+<p dir="auto">• Sound effects </p>
+
+<p dir="auto">• Getting combos to work with the controller</p>
+
+<h2 dir="auto">
+<a id="user-content-production-schedule" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#production-schedule" aria-hidden="true"></a>Production Schedule</h2>
+
+<p dir="auto"><strong>Week 1</strong></p>
+
+<p dir="auto">General Design Changes and helping other team members -James</p>
+
+<p dir="auto">Controller input - Troy</p>
+
+<p dir="auto">Combos – timing, chaining - Troy</p>
+
+<p dir="auto">Basic character art - Reuben</p>
+
+<p dir="auto">Play Testing (all weeks) - All</p>
+
+<p dir="auto">Enemy AI - Albert</p>
+
+<p dir="auto"><strong>Week 2</strong></p>
+
+<p dir="auto">Level implementation - James</p>
+
+<p dir="auto">Animations – combo art design, general design - Reuben</p>
+
+<p dir="auto">Level Design Art - Reuben</p>
+
+<p dir="auto">Stats how much health you have, enemy health amount - Troy</p>
+
+<p dir="auto">Boss Fight - Albert</p>
+
+<p dir="auto">Boss AI - Albert</p>
+
+<p dir="auto"><strong>Week 3</strong></p>
+
+<p dir="auto">Music -James</p>
+
+<p dir="auto">Fully Developed Character Art - Reuben</p>
+
+<p dir="auto">Sound effects -James</p>
+
+<p dir="auto"><strong>Week 4</strong></p>
+
+<p dir="auto">Debugging – All</p>
+
+<h2 dir="auto">
+<a id="user-content-game-mechanics" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#game-mechanics" aria-hidden="true"></a>Game Mechanics</h2>
+
+<p dir="auto">The logic is fairly straight forward, the enemies attack the player as he enters an area they already know he is there (except for a brief moment on the first level).Hence there are no patrolling enemies. All entities are free to move anywhere on the screen with certain restrictions on enemy behavior (see enemy types).</p>
+
+<h3 dir="auto">
+<a id="user-content-combos" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#combos" aria-hidden="true"></a>Combos</h3>
+
+<p dir="auto">All combos are timed based, after the first button press to initiate the combo a timer start's if the second button is pressed before  .2 seconds has past or after .5 seconds the combo will not work     </p>
+
+<p dir="auto"><strong>Area of effect combos :</strong></p>
+
+<ul dir="auto">
+<li>Spinning kick (B, B, A) hits any enemy within a 3 foot radius of the player</li>
+</ul>
+
+<p dir="auto"><strong>Single target combos:</strong></p>
+
+<ul dir="auto">
+<li><p>Juggle (A, A, B) hits a single enemy in the selected direction, Punches the enemy into the air followed up by a kick that knocks the enemy back</p></li>
+<li><p>Crane Kick (B, B) hits a single enemy in the selected direction, Crane kick does increased damage</p></li>
+</ul>
+
+<p dir="auto"><strong>Power up combos:</strong></p>
+
+<ul dir="auto">
+<li><p>Sumo slam (X, A, X, A) Player jumps up into the air for 1 second landing  at the location of the player(can move in the air) squashing any enemy within a 5 foot radius of the location</p></li>
+<li><p>Rolling  sumo (B, B, X, X, B) Player rolls  around in a ball form for 2.5 seconds squashing any enemy the players hits</p></li>
+</ul>
+
+<h3 dir="auto">
+<a id="user-content-gui" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#gui" aria-hidden="true"></a>GUI</h3>
+
+<p dir="auto">The HUD is fairly standard with simply the score, health and rice bowls displayed at the top right. Some of the relevant information will be displayed in game. The amount of damage the player has done to an enemy will also be displayed as text on screen in the style of street fighter.</p>
+
+<h3 dir="auto">
+<a id="user-content-loadingsaving" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#loadingsaving" aria-hidden="true"></a>Loading/saving</h3>
+
+<p dir="auto">You can not save games. Once you have completed a level it will give you have access to start at the beginning of the next level if you die. When the game is finished you will be able to go back and play all the levels starting from whichever one you desire.</p>
+
+<h3 dir="auto">
+<a id="user-content-screen-layoutflow" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#screen-layoutflow" aria-hidden="true"></a>Screen layout/Flow</h3>
+
+<p dir="auto">The game begins with a menu screen with links to a combo instruction screen (which can also be accessed by pausing the game) and a start game link. Then it progresses to the story screen (which is skippable). Each scene will have a short intro screen (mainly for when the player decides to replay a certain scene). When the player has died or quits their score will be displayed on the start menu screen.</p>
+
+<h3 dir="auto">
+<a id="user-content-demographics" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#demographics" aria-hidden="true"></a>Demographics</h3>
+
+<p dir="auto">The game is aimed at males 10 to 26. The violence of the action and the arcade style of the game lend itself to the male psychology. The game is not particularly deep so it may not appeal to older gamers.</p>
+
+<h1 dir="auto">
+<a id="user-content-enemy-design" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#enemy-design" aria-hidden="true"></a>Enemy Design</h1>
+
+<p dir="auto"><strong>Bruiser</strong></p>
+
+<p dir="auto">The toughest enemy. Due to his slowness is not that hard for the player to take him down. He can cause great damage to the player, if the player is not watching what is happening.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Bruiser.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Bruiser.png" alt="Bruiser"></a></div>
+
+<ul dir="auto">
+<li><p>Characteristics:</p></li>
+<li><p>Movement: Slow</p></li>
+<li><p>Attack Speed: Slow</p></li>
+<li><p>Health: High</p></li>
+<li><p>Damage: High</p></li>
+<li><p>Range : Medium/Short  </p></li>
+<li><p>Weapon:  Fists/Hammer/Pole arm</p></li>
+<li><p>Tactics: Moves slowly toward the player, when in range attacks</p></li>
+<li><p>Optional Special: Grabs and holds the player, while other enemies hit the player</p></li>
+<li><p>Personality: laughs at player, is supremely confident and not used to being defeated</p></li>
+</ul>
+
+<h2 dir="auto">
+<a id="user-content-average-enemies" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#average-enemies" aria-hidden="true"></a>Average Enemies</h2>
+
+<p dir="auto">There are two types of average enemy</p>
+
+<p dir="auto">The purpose of the average enemy is basically fodder for the player to make the player feel powerful. The swordsmen are designed to be taken out by the group affecting combo attacks.</p>
+
+<p dir="auto"><strong>Bowman</strong></p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/BowMan.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/BowMan.png" alt="BowMan"></a></div>
+
+<ul dir="auto">
+<li><p>Movement: None</p></li>
+<li><p>Attack Speed: Medium</p></li>
+<li><p>Health: Low</p></li>
+<li><p>Damage: Medium</p></li>
+<li><p>Range : Long</p></li>
+<li><p>Weapon: Crossbow/Bow</p></li>
+<li><p>Tactics: is situated as far from the player as possible and shoots his bow at given intervals</p></li>
+<li><p>Personality: Holds his ground until the bitter end firing his crossbow</p></li>
+</ul>
+
+<p dir="auto"><strong>Swordsman</strong></p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Swordsman.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Swordsman.png" alt="Swordsman"></a></div>
+
+<ul dir="auto">
+<li><p>Movement: Medium</p></li>
+<li><p>Attack Speed: Medium</p></li>
+<li><p>Health: Low</p></li>
+<li><p>Damage: Low (always in a group so this accumulates to medium)</p></li>
+<li><p>Range : Short  </p></li>
+<li><p>Weapon:  Sword</p></li>
+<li><p>Tactics: Attacks in groups of 2/3/4 attempting to swarm the player, the group could be considered as one enemy</p></li>
+<li><p>Personality: timid, when there is only one of them they will run away</p></li>
+</ul>
+
+<p dir="auto"><strong>Ninja Guard (A bad ass)</strong></p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Ninja_Guard.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Ninja_Guard.png" alt="Ninja_Guard"></a></div>
+
+<ul dir="auto">
+<li><p>Movement: Fast</p></li>
+<li><p>Attack Speed: Fast</p></li>
+<li><p>Health: Medium</p></li>
+<li><p>Damage: Low (low but he attacks quickly so can accumulate)</p></li>
+<li><p>Range : Short</p></li>
+<li><p>Weapon: Twin Katana/Daggers</p></li>
+<li><p>Tactics: jumps and rolls around the player striking him then rolling/jumping away, he is harder to hit than the other enemies</p></li>
+<li><p>Personality: Did I mention he’s a bad ass</p></li>
+</ul>
+
+<h1 dir="auto">
+<a id="user-content-level-design" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-design" aria-hidden="true"></a>Level Design</h1>
+
+<p dir="auto">The levels tell a story, each one is like a scene that makes a whole. This makes the game a lot more cohesive and interesting. After the main menu the game begins with Shibō's story. This is displayed over a picture of Shibō scaling the wall of the lord’s palace, which is a visual queue that connects the story to the first level.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/IntroScreen.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/IntroScreen.png" alt="IntroScreen"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-game-map" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#game-map" aria-hidden="true"></a>Game Map</h2>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/overview.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/overview.png" alt="overview"></a></div>
+
+<h1 dir="auto">
+<a id="user-content-level-overview" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-overview" aria-hidden="true"></a>Level Overview</h1>
+
+<h2 dir="auto">
+<a id="user-content-level-1-balcony" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-1-balcony" aria-hidden="true"></a>Level 1 Balcony</h2>
+
+<p dir="auto">Shibō arrives on the balcony of the lord's palace having scaled the wall. The purpose of this level is to introduce the fighting mechanics with a few enemies.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level1.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level1.png" alt="level1"></a></div>
+
+<p dir="auto">Shibō enters door/window which leads to level 2</p>
+
+<h2 dir="auto">
+<a id="user-content-level-2-courtyard" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-2-courtyard" aria-hidden="true"></a>Level 2 Courtyard</h2>
+
+<p dir="auto">A small courtyard with four guards. The purpose of this level is there are guards positioned around the room and they swarm Shibō. So the player is introduced to fighting multiple enemies in an open area.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level2.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level2.png" alt="level2"></a></div>
+
+<p dir="auto">Shibō can only open the door to the next level when he has defeated all the guards. </p>
+
+<h2 dir="auto">
+<a id="user-content-level-3-banquet-hall" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-3-banquet-hall" aria-hidden="true"></a>Level 3 Banquet Hall</h2>
+
+<p dir="auto">This is a larger room where the player can move around more and there are a lot more enemies. The banquet hall theme lends itself to food pick-ups. Also there will possibly be a set piece in this room. Such as Shibō can hit one end of the tables sending things at the other end flying.  </p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level3.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level3.png" alt="level3"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-4-lavish-staircase" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-4-lavish-staircase" aria-hidden="true"></a>Level 4 Lavish Staircase</h2>
+
+<p dir="auto">Note: this Level could certainly be removed if there is not time</p>
+
+<p dir="auto">The purpose of this level is to build anticipation to the final throne room. It could also provide oppurtunity for more ranged attacks by enemies. It should also give the player the feeling he is no longer sneaking into the palace, the lord is ready for him and has set up some defence. Shibō must fight his way to the top of the staircase to enter the throne room.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level4.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level4.png" alt="level4"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-5-throne-room" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-5-throne-room" aria-hidden="true"></a>Level 5 Throne Room</h2>
+
+<p dir="auto">Possible intro - A short dialogue between Sukinī and Shibō. Then Sukinī pulls a switch and the floor gives way so only  the sumo ring remains surrounded by lava. Shibō fights either  Sukinī or his son in a sumo wrestling match. The point of this fight is to push the boss out of the ring into the lava – similar to the Spyro boss fight below.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level5.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level5.png" alt="level5"></a></div>
+
+<h1 dir="auto">
+<a id="user-content-in-depth-level-layout" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#in-depth-level-layout" aria-hidden="true"></a>In Depth Level Layout</h1>
+
+<p dir="auto">Note: This is all subject to change and will change as play testing begins</p>
+
+<h2 dir="auto">
+<a id="user-content-level-1" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-1" aria-hidden="true"></a>Level 1</h2>
+
+<p dir="auto">Shibō jumps onto the outside balcony, the archer is  alerted and calls for help. A Bruiser and three Swordsmen enter the balcony area from around the corner (from anywhere that is not the exit otherwise it will not work when he goes through the exit to the next level).  Shibō defeats them, the Bruiser drops the exit key, Shibō exits. There are 3 bowls of rice so the player can try the fat state mechanic. The player is only attacked from the front in this level.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level1(1).png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level1(1).png" alt="Level1"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-2" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-2" aria-hidden="true"></a>Level 2</h2>
+
+<p dir="auto">Shibō drops down into the courtyard is noticed by all Swordsmen they swarm him from all sides. This introduces the swarm mechanic , then he defeats them. A ninja enters after this and Shibō defeats him. The ninja drops the exit key. So the player is introduced to the second type of more challenging enemy. Again there are 3 bowls of rice.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level2(1).png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level2(1).png" alt="Level2"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-3" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-3" aria-hidden="true"></a>Level 3</h2>
+
+<p dir="auto">This level will require a lot of play testing and balancing it is a complex level. It will almost certainly change, hence I have kept its design pretty loose. This level is essentially a free for all. The player goes nuts having been introduced to the mechanics and enemy types in previous levels.
+Shibō enters the banquet hall.  At each table there are mostly Swordsmen. At one table  there sits a Bruiser and at the other a Ninja Guard. There are multiple bowls of rice one for each enemy that is sitting at the table. The last enemy killed will drop the exit key so Shibō must defeat all enemies before going to the next level.</p>
+
+<p dir="auto"><strong>Design 1</strong></p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Level3-1.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Level3-1.png" alt="Level3-1"></a></div>
+
+<p dir="auto"><strong>Design 2</strong></p>
+
+<p dir="auto">Introduced two Archers in the corners of the room. Round tables and the enemies are now sitting – this is more Japanese style.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Level3-2.png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/Level3-2.png" alt="Level3-2"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-4" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-4" aria-hidden="true"></a>Level 4</h2>
+
+<p dir="auto">To add some difference this level features six Archers. Shibō must fight his way up the stairs past one of the Bruisers. Then the player takes  sweet revenge on the Archers that have been damaging him. Most likely he will eat the rice and use his Fat State to kill the Archers and other Bruiser. The last enemy drops the exit key and the player goes to Level  5.</p>
+
+<p dir="auto"></p><div class="image-container"><a class="no-attachment-icon" href="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level4(1).png" target="_blank"><img src="./Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab_files/level4(1).png" alt="Level4"></a></div>
+
+<h2 dir="auto">
+<a id="user-content-level-5-the-boss-level" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#level-5-the-boss-level" aria-hidden="true"></a>Level 5 – The Boss Level</h2>
+
+<p dir="auto">The boss fight is to fight one boss and it has several stages, in each stage, the boss will have a new shape and a new combat style. The player needs to conquer one stage in order to get to the next. After clearing all 3 stages, the game ends and the final scene get showed.</p>
+
+<h2 dir="auto">
+<a id="user-content-stage-1" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#stage-1" aria-hidden="true"></a>Stage 1:</h2>
+
+<h4 dir="auto">
+<a id="user-content-how-the-boss-fights" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-the-boss-fights" aria-hidden="true"></a>How the boss fights</h4>
+
+<ul dir="auto">
+<li>At this stage, the boss will stand above a little tower which is outside the "fight ring", and throw balls at the player. </li>
+<li>The boss will have a throwing animation.</li>
+<li>The balls will be thrown in the last frame of animation.</li>
+<li>When the ball drops on the ground, after 2 seconds(or 2 animation frames), the boss will start to throw the next one. (Why? You will find the answer below )</li>
+<li>The player can't beat boss by hit the tower.</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-how-it-hurts" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-it-hurts" aria-hidden="true"></a>How it hurts</h4>
+
+<ul dir="auto">
+<li>The fireball will move towards the position where the player stands when the ball is thrown.</li>
+<li>If it hits the player, the player will lose 1HP, but the player can run away.</li>
+<li>There are two types of balls will be thrown:
+
+<ul>
+<li>Normal ball: After landing, the player can hit it back, but there is 50% chance which the boss will catch it with no harm, otherwise the boss gets hit. And this ball won't vanish through time.</li>
+<li>Fireball: The player should avoid it, and it will vanish after 3 seconds since it has burned down and along with all other items which are adjacent to it by 1 cell.</li>
+</ul>
+</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-something-interesting" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#something-interesting" aria-hidden="true"></a>Something interesting:</h4>
+
+<p dir="auto">The player can build a ball chain and does a power attack. For instance:</p>
+
+<ul dir="auto">
+<li>The player stands at A1 at first, the boss throws, a ball will finally drop at A1.</li>
+<li>Then the player moves to A2 which is vertically adjacent to A1, then the boss throws and a ball finally drop at A2.</li>
+<li>Then the player moves to A3 which is vertically adjacent to A2, then the boss throws and a ball finally drop at A3.</li>
+<li>Now the player gets a vertical ball chain, and he can move to the bottom one and hit it with a special move which he acquired through the previous level.</li>
+<li>The ball chain will fly towards the boss and beat it without any mercy.</li>
+<li>An example of the move will be : forward, forward, punch. Then the player will do slash punch.</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-fun-factor" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#fun-factor" aria-hidden="true"></a>Fun factor:</h4>
+
+<ul dir="auto">
+<li>Besides building the power attack, the fact that fireball will vanish and burned down all the adjacent items will let the player does some tactic movement in order to build a successful ball chain.</li>
+<li>And each attack will make the boss swell (increase his size but has a more hurtful look, been red sort of things.) since he gets hurt.</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-how-to-beat-this-stage" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-to-beat-this-stage" aria-hidden="true"></a>How to beat this stage:</h4>
+
+<p dir="auto">The boss has 12 HP, each power attack will minus 4 while each normal ball attack will do 2 damage.</p>
+
+<h2 dir="auto">
+<a id="user-content-stage-2" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#stage-2" aria-hidden="true"></a>Stage 2:</h2>
+
+<p dir="auto">Now the boss becomes relative bigger compare to the player, and he will jump into the "fighting ring" finally.</p>
+
+<h4 dir="auto">
+<a id="user-content-how-the-boss-fights-1" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-the-boss-fights-1" aria-hidden="true"></a>How the boss fights?</h4>
+
+<ul dir="auto">
+<li>The boss will always move towards the player, but with a slower speed (but not that slow in order to get some intense feeling.)</li>
+<li>After 3 seconds, the boss will shift to <strong>attacking stance</strong>:
+
+<ul>
+<li>His 2 arms will become longer.</li>
+<li>He will do a ready to hug position.</li>
+<li>But his arms won't get across now, so there is enough gap for the player to run away.</li>
+<li>The move speed of boss will increase at the attacking stance.</li>
+<li>Then after 4 seconds, the boss will try to hug the player:</li>
+<li>[Hug] The player gets hurt.</li>
+<li>[Hug failed] The boss will either enter the normal stance or "tired stance".</li>
+<li>The boss is invincible while in <strong>normal stance</strong> and <strong>attack stance</strong>.</li>
+</ul>
+</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-how-to-beat-the-boss" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-to-beat-the-boss" aria-hidden="true"></a>How to beat the boss?</h4>
+
+<ul dir="auto">
+<li>When the boss enters the <strong>tired stance</strong>, he will feel tired and lay down.</li>
+<li>Now the player can jump onto his arm, and move towards his head, and beat his head.</li>
+<li>After 1 hit, the boss will restore to normal stance and stand up.</li>
+<li>The player will get thrown from his body.</li>
+<li>A new cycle begins.</li>
+<li>After 3 hits, stage 2 is conquered.</li>
+</ul>
+
+<h2 dir="auto">
+<a id="user-content-stage-3" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#stage-3" aria-hidden="true"></a>Stage 3</h2>
+
+<p dir="auto">Now the boss will wear armor (which will cover his arms and head) and enter Gongfu stance. And yes, he will be invincible until...</p>
+
+<h4 dir="auto">
+<a id="user-content-how-the-boss-fights-in-stage-3" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-the-boss-fights-in-stage-3" aria-hidden="true"></a>How the boss fights in Stage 3?</h4>
+
+<ul dir="auto">
+<li>He will move towards the player.</li>
+<li>Attack with his right arm, there is a chance that after he tries to punch, his arm will lay there, and he will be breathless for a while.</li>
+<li>Then with his left arm.</li>
+<li>Then he will try to attack with his fat belly,  still has a chance to be breathless (Damn, I love fighting with fat people...)</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-how-to-beat-the-boss-1" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#how-to-beat-the-boss-1" aria-hidden="true"></a>How to beat the boss?</h4>
+
+<ul dir="auto">
+<li>When the arm of the boss is laid there, the player can attack his arm, but it will hit his arm armor, and the armor will change color to red.</li>
+<li>When all 3 armors (arms and head) become red, the boss will be stunned and sit there for a while.</li>
+<li>The player can now beat him with a special move: back, forward, punch. Sort of combinations.</li>
+<li>After the player lands three successful attacks, the boss will finally be beaten by the player.</li>
+</ul>
+
+<h4 dir="auto">
+<a id="user-content-what-happens-next" class="anchor" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#what-happens-next" aria-hidden="true"></a>What happens next?</h4>
+
+<ul dir="auto">
+<li>The boss will stand up and say "Now I will show you something real."</li>
+<li>The music becomes intense and the background will become bloody.</li>
+<li>2 enemies will bring something to the "fighting ring"</li>
+<li>The boss will pick it up and give it to the player. "Here is the real medal, take it and go, I am getting sick of beaten by someone else."</li>
+<li>The player can now land a normal single punch on the boss, and the boss will spin fly out of the screen.</li>
+<li>The screen becomes dark, and the final caption "Justice should be done".</li>
+</ul></div>
+</div>
+</div>
+<aside class="right-sidebar right-sidebar-expanded wiki-sidebar js-wiki-sidebar" style="overflow: hidden; outline: none;" tabindex="8">
+<div class="block wiki-sidebar-header append-bottom-default">
+<a class="gutter-toggle pull-right visible-xs-block visible-sm-block js-sidebar-wiki-toggle" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#">
+<i class="fa fa-angle-double-right"></i>
+</a>
+<a class="" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/git_access"><i class="fa fa-cloud-download"></i>&nbsp;
+Clone repository
+</a></div>
+<div class="blocks-container">
+<div class="block block-first">
+<ul class="wiki-pages">
+<li class="active">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment">Assignment
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Boss">Boss
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Enemies">Enemies
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Fighting">Fighting
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Levels">Levels
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Music">Music
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Reports">Reports
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/ai">Ai
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/art">Art
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/character">Character
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/concept">Concept
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/goals">Goals
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/home">Home
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/ideas">Ideas
+</a></li>
+<li class="">
+<a href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/reference">Reference
+</a></li>
+</ul>
+</div>
+<div class="block">
+<a class="btn btn-block" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/pages">More Pages
+</a></div>
+</div>
+</aside>
+<div class="container-fluid container-limited">
+<div class="modal" id="modal-new-wiki">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" href="https://longitude.otago.ac.nz/rcrimp/FatNinja/wikis/Assignment#">×</a>
+<h3 class="page-title">New Wiki Page</h3>
+</div>
+<div class="modal-body">
+<form class="new-wiki-page">
+<div class="form-group">
+<label for="new_wiki_path"><span>Page slug</span>
+</label><input type="text" name="new_wiki_path" id="new_wiki_path" placeholder="how-to-setup" class="form-control" required="required" data-wikis-path="/rcrimp/FatNinja/wikis" autofocus="autofocus">
+</div>
+<div class="form-actions">
+<button name="button" type="submit" class="build-new-wiki btn btn-create">Create Page</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="ascrail2008" class="nicescroll-rails nicescroll-rails-vr" style="width: 7px; z-index: 10; cursor: default; position: fixed; top: 102px; left: 1896px; height: 799px; touch-action: none; display: none;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px; touch-action: none;"></div></div><div id="ascrail2008-hr" class="nicescroll-rails nicescroll-rails-hr" style="height: 7px; z-index: 10; top: 894px; left: 1614px; position: fixed; cursor: default; display: none;"><div class="nicescroll-cursors" style="position: absolute; top: 0px; height: 5px; width: 0px; background-color: rgb(66, 66, 66); border: 1px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><div class="device-xs visible-xs"></div><div class="device-sm visible-sm"></div><div class="device-md visible-md"></div><div class="device-lg visible-lg"></div></body></html>
