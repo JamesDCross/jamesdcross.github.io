@@ -30,6 +30,12 @@ h6 {
   letter-spacing: 1px;
 }
 
+/*may screw responsiveness*/
+ #contact p{
+    color: white;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
 h2{
    /* margin-top: 0px;*/
     font-family: 'Raleway', sans-serif;
