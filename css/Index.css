@@ -12,9 +12,8 @@ body {
   font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
   background-color: white;
-  /*wierd space on side of page --just make picture bigger*/
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
     /*overflow-x: hidden;*/
 }
 
@@ -42,11 +41,11 @@ h6 {
   }
 
 h2{
-   /* margin-top: 0px;*/
+   
     font-family: 'Raleway', sans-serif;
     color:rgb(80, 80, 80);
     font-size: 20px;
-    font-weight: 700; /*700px is different*/
+    font-weight: 700; 
     line-height: 24px;
     text-transform: uppercase; 
     /*-webkit-font-smoothing: antialiased;
@@ -58,12 +57,10 @@ h2{
 p {
   font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    /*font-size: 14px;*/
-    
     line-height: 23.8px;
     color:rgb(141, 141, 141);
-    /*margin-bottom: 0px;*/
 }
+/*take out just for debug*/
 /*@media (min-width: 768px) {
   p {
     margin: 0 0 35px;/*this is whats giving it the margin
@@ -72,27 +69,23 @@ p {
   }
 }*/
 
-/*not sure what this is*/
+
 .light {
   font-weight: 400;
 }
 .navbar-custom {
   margin-bottom: 0;
-  /*border-bottom: 5px solid rgba(255, 255, 255, 0.2);*/
- 
   text-transform: uppercase;
   font-family: "Montserrat",'Raleway', sans-serif;
   background-color: black;
 }
-
-
-
 
 .navbar-custom .navbar-toggle {
   color: white;
   background-color: black;
   font-size: 12px;
 }
+
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:active {
   outline: none;
@@ -103,7 +96,6 @@ p {
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
-/*this controls the header txt colour*/
 .navbar-custom a {
   color: white;
 }
@@ -132,7 +124,7 @@ p {
   color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /*768, doesnt seem to effect anything*/
   .navbar-custom {
     padding: 20px 0;
     /*initial navbar border*/
@@ -143,6 +135,7 @@ p {
     -moz-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
     /*changed navbar fade in speed here*/
     transition: background 0.1s ease-in-out, padding 0.2s ease-in-out;
+    letter-spacing: 1px;
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
@@ -159,23 +152,11 @@ p {
   text-align: center;
   color: black;
   background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-   
- 
-    
- 
-
-
-  /*background-color: black;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-/*.intro .intro-body {
-  display: table-cell;
-  vertical-align: middle;
-}*/
-
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
@@ -195,8 +176,9 @@ p {
     font-size: 26px;
   }
 }
+
 /*this makes above pointless*/
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   .intro {
     height: 100%;
     width: 100%;
@@ -211,7 +193,7 @@ p {
   }
 
 #textfront{
-  font-size: 20px;
+  font-size: 36px;
   margin-bottom: 0px;
 }
 
@@ -220,6 +202,7 @@ p {
 }
  
 }
+
 /*wierd white gap on right side was coming from bootstrap row*/
  .row {
   padding-right: 0px;
@@ -229,6 +212,220 @@ p {
 }
 
 
+   .btn {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+
+.btn-default {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid darkgrey;
+  outline: none;
+  color: black;
+  background-color: darkgrey;
+}
+
+/*More Buttons*/
+#moreButton {
+
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 2px;
+}
+
+#mButton {
+  vertical-align:middle;display:inline-block;
+}  
+/*so all formatting off when phone*/
+/*note: i have set the ipad/tablet portrait to kick in only 768px this eems bad practice but i looked into it at at 
+present it is compatible with every brand galaxy etc*/
+/*769*/
+@media (min-width: 991px) { /*this should not be at 991 makes a snap point though 769*/
+       /*Current Project Title*/
+ #CurrentProjectTitle {
+  margin-top: 80px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+                                
+ #textback {
+  color: #F5F5F5;
+  z-index: -1;
+  font-size: 75px;
+  position: relative;
+  left: 0px;
+  bottom: 100px;
+  margin-bottom: 0px;
+  margin-top: 35px;
+}
+
+#textfront {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+        
+/*------------------------------------------------------*/
+
+#contact p {
+  color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ 
+#pic {       
+  width: 406px;
+  height: 406px;
+}
+                
+#text {
+  box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
+  padding-top: 123px;
+  padding-bottom: 123px;
+  padding-left: 463px;
+  padding-right: 58px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 406px;
+}
+
+#text2 {
+  box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
+  padding-top: 123px;
+  padding-bottom: 123px;
+  padding-left: 58px;
+  padding-right: 463px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 406px;
+}
+
+/*Contact section*/
+
+
+#contact {
+  margin-top: 236px;
+  background: black;
+  padding-bottom: 560px;
+}
+
+} 
+
+@media (min-width: 768px) {
+
+#heading{
+
+  padding-top:15px;
+}
+
+
+}
+
+@media (max-width: 767px) {
+
+.intro {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: url(img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+
+#textfront{
+  font-size: 20px;/*bootstrap does this anyway take out*/
+  margin-bottom: 0px;
+}
+
+.navbar-custom a{
+  color: black;
+}
+ 
+#main{
+margin-left: 5px;
+margin-right: 5px;
+}
+#nameTitle{
+  font-size: 14px;
+}
+#contact{
+  background: black;
+   margin-top: 20px;
+}
+#moreButton{
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+#pic{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.btn {
+  margin-bottom: 15px
+}
+p{
+color: black; 
+}
+h2{
+  font-weight: 800;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+#contact h2{color: white;};
+}
+
+/*Ipad Portrait*/
+@media (width: 768px){
+
+h1{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  /*font-size: 50px; /*this maybe doing nothing*/
+}
+
+#contact h2{color: white;};
+
+p{
+  font-size: 14px;
+  color: black;                
+}
+
+#pic {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/*gross repeat take out*/
+.btn {
+  
+  margin-bottom: 15px
+}
+
+#contact {
+  background: black;
+  margin-top: 20px; 
+}
+
+ 
+} 
 
 
 
