@@ -82,7 +82,7 @@
  <h1>Treasure iLand</h1>
 
  
-<a href="TreasureiLand/index.html" style="font-size: 36px">Play the prototype</a>
+<a href="TreasureiLand/index.html" style="font-size: 24px">Play the prototype</a>
 
 <h2>How to Play</h2>
   <p id = "instructions">Move with the arrow keys<br> Press F to dig<br></p>
@@ -98,7 +98,7 @@
 
     <div class="col-md-6" id="conceptPanel2">
       <div class="img-responsive" >
-          <a href = "img/PiratePanel1.jpg" data-lightbox="gallery" data-title="beards"> <img src="img/PiratePanel1Thumb.jpg" alt="Lights"  style="width:100%"></a>
+          <a href = "img/PiratePanel1.jpg" data-lightbox="gallery"> <img src="img/PiratePanel1Thumb.jpg" alt="Lights"  style="width:100%"></a>
       </div>
   </div>
 
@@ -154,7 +154,7 @@
 
 
  <h2>Elevator Pitch</h2>
-   <p>A hot and cold game with a pirate theme, you must race against the clock and find all the chests. </p>
+   <p>A hot and cold game with a pirate theme, you must race against the clock to collect all the treasure. </p>
 
 
     <h2>Concept</h2>
@@ -162,8 +162,8 @@
      <p>
 The player digs for treasure on a desert island. Chests have different depths, most contain gold but some contain 
   special crackers. These allow Polly (an so the player) to see all chests or provide a time bonus the player can use at their disposal.
-When all the chests in all levels on an island are cleared the player progresses to the next island.
-Some islands contain ruins some contain other pirates... and maybe an easter egg or two,  4 8 15 16 23 42 anyone?
+When all the chests in all levels on an island are cleared, the player progresses to the next island.
+Some islands contain ruins some contain other pirates... and maybe an easter egg or two.
 
 
      </p>
@@ -192,6 +192,15 @@ Some islands contain ruins some contain other pirates... and maybe an easter egg
 
 
 <style>
+/*got rid of hr but kept the spacing re-format later*/
+hr{
+ display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
 /*temporary fix*/
 #bottom-line{
@@ -260,14 +269,6 @@ p{
  /* box-shadow: inset 0px -3px 42px 20px rgba(0,0,0,0.2);*/
 }
 
-hr{
- display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
 #conceptpanel:hover img{
   opacity: 0.9;
  /*transform: scale(0.98);*/
@@ -373,6 +374,13 @@ width:100px;
 #nameTitle{
   color: white;
 }
+
+/*hacky*/
+h1{
+  font-size: 36px;
+}
+
+
 
 }
 
