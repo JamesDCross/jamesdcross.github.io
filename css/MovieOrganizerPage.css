@@ -1,136 +1,123 @@
-h2{
+
+
+h2 {
   margin-top: 30px;
 }
 
- .navbar-fixed-top{
-   padding-top: 0px;
- }
-
-
-#main{
-
- margin-top: 86px;
+.navbar-fixed-top {
+  padding-top: 0px;
 }
 
-p{
+#main {
+  margin-top: 86px;
+}
+
+p {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
 
-
-
-@media (min-width: 768px) { 
-
-#topTitle{
-
-  font-size: 68px;
-}
-#contact{
-  padding-bottom: 600px;
-}
-
- .navbar-custom{
-    /*background: #2d78cc;*/
-    background: black;
- }
-.navbar-custom a{
-
-  color: white;
-}
-#moLogoImg{
-/*width:150px;*/
-width: 90px;
-padding-bottom: 50px;
-}
-
-#contact{
-   /*background: #2d78cc;*/
-    background: black;
-   margin-top: 236px
-}
-
- .navbar-custom.top-nav-collapse {
-    /*padding: 0;*/
-    /*background: #2d78cc;*/
-   background: black;
+  #topTitle {
+    font-size: 68px;
   }
 
+  #contact {
+    padding-bottom: 600px;
+  }
 
+  .navbar-custom {
+    background: black;
+  }
 
-#text{
+  .navbar-custom a {
+    color: white;
+  }
 
-padding-top: 50px;
- padding-left: 58px;
- padding-right: 58px;
- padding-bottom: 50px;
- box-shadow: none;
-}
+  #moLogoImg {
+    width: 90px;
+    padding-bottom: 50px;
+  }
 
-#pic{
-  margin-top: 40px;
-width: 523px;
-height: 505px;
+  #contact {
+    background: black;
+    margin-top: 236px;
+  }
 
-}
- 
+  .navbar-custom.top-nav-collapse {
+    background: black;
+  }
+
+  #text {
+    padding-top: 50px;
+    padding-left: 58px;
+    padding-right: 58px;
+    padding-bottom: 50px;
+    box-shadow: none;
+  }
+
+  #pic {
+    margin-top: 40px;
+    width: 523px;
+    height: 505px;
+  }
 }
 
 /*to deal with index css temporarily, removes "glitch"*/
 @media (min-width: 991px) and (max-width: 1023px) {
-#text{
-padding-bottom: 1190px;
-}
-}
-
-@media (min-width: 1024px) { 
-
-#moLogoImg{
-/*width:150px;*/
-width: 90px;
-padding-bottom: 50px;
+  #text {
+    padding-bottom: 1190px;
+  }
 }
 
-#topTitle{
+@media (min-width: 1024px) {
+ 
+  #moLogoImg {
+    width: 90px;
+    padding-bottom: 50px;
+  }
 
-  font-size: 78px;
+  #topTitle {
+    font-size: 78px;
+  }
+
+  #text {
+    padding-bottom: 1190px;
+  }
+
+  #contact {
+    padding-bottom: 300px;
+/*note its only at 1280 it doesnt work, so maybe change bakc?*/;
+  }
 }
 
-#text{
-padding-bottom: 1190px;
+@media (max-width: 767px) {
+ 
+  .navbar-custom a {
+    color: white;
+  }
+
+  #text {
+    padding-bottom: 20px;
+  }
+
+  #main {
+    margin-top: 73px;
+  }
+
+  #nameTitle {
+    color: white;
+  }
 }
-#contact{
-  padding-bottom: 300px;/*note its only at 1280 it doesnt work, so maybe change bakc?*/
-}
+
 
 
 
-}
 
-@media (max-width: 767px) { 
 
-.navbar-custom a{
-color: white;
-}
-/*
-#moLogoImg{
-width:100px;
-}
 
-#moLogo{
 
-  padding-top: 20px;
-}
-*/
-#text{
-  padding-bottom: 20px;
-}
 
-#main{
-  margin-top: 73px;
-}
 
-#nameTitle{
-  color: white;
-}
 
-}
+

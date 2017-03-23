@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
+ * I sourced this when I started the webpage - Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
@@ -14,67 +14,53 @@ body {
   background-color: white;
   margin: 0px;
   padding: 0px;
-    /*overflow-x: hidden;*/
+    /*overflow-x: hidden;*/;
 }
 
 html {
   width: 100%;
   height: 100%;
 }
+
 h1,
 h3,
 h4,
 h5,
 h6 {
-  
   text-transform: uppercase;
-  
-  font-family: 'Raleway', Helvetica, Arial, sans-serif ;
-  
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-/*may screw responsiveness*/
- #contact p{
-    color: white;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-
-h2{
-   
-    font-family: 'Raleway', sans-serif ;
-    color:rgb(80, 80, 80);
-    font-size: 20px;
-    font-weight: bold;
-    
-    line-height: 24px;
-    text-transform: uppercase; 
-    /*-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: subpixel-antialiased;*/
+#contact p {
+  color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h2 {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(80, 80, 80);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+    /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: subpixel-antialiased;*/;
+}
 
 p {
   font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    line-height: 23.8px;
-    color:rgb(141, 141, 141);
+  font-weight: 400;
+  line-height: 23.8px;
+  color: rgb(141, 141, 141);
 }
-/*take out just for debug*/
-/*@media (min-width: 768px) {
-  p {
-    margin: 0 0 35px;/*this is whats giving it the margin
-    font-size: 20px;
-    line-height: 1.6;
-  }
-}*/
-
 
 .light {
   font-weight: 400;
 }
+
 .navbar-custom {
   margin-bottom: 0;
   text-transform: uppercase;
@@ -92,41 +78,51 @@ p {
 .navbar-custom .navbar-toggle:active {
   outline: none;
 }
+
 .navbar-custom .navbar-brand {
   font-weight: 700;
 }
+
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
+
 .navbar-custom a {
   color: white;
 }
+
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
+
 .navbar-custom .nav li a:hover {
   color: rgba(255, 255, 255, 0.8);
   outline: none;
   background-color: transparent;
 }
+
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
   outline: none;
   background-color: transparent;
 }
+
 .navbar-custom .nav li.active {
   outline: none;
 }
+
 .navbar-custom .nav li.active a {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 .navbar-custom .nav li.active a:hover {
   color: white;
 }
 
-@media (min-width: 768px) { /*768, doesnt seem to effect anything*/
+@media (min-width: 768px) {
+ /*768, doesnt seem to effect anything*/
   .navbar-custom {
     padding: 20px 0;
     /*initial navbar border*/
@@ -139,10 +135,10 @@ p {
     transition: background 0.1s ease-in-out, padding 0.2s ease-in-out;
     letter-spacing: 1px;
   }
+
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background: white;
-    /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
   }
 }
 
@@ -150,7 +146,6 @@ p {
   display: table;
   width: 100%;
   height: auto;
-  /*padding: 100px 0;*/
   text-align: center;
   color: black;
   background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
@@ -159,27 +154,15 @@ p {
   background-size: cover;
   -o-background-size: cover;
 }
+
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
+
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
 
-@media (min-width: 768px) {
-  .intro {
-    height: 100%;
-    padding: 0;
-  }
-  .intro .intro-body .brand-heading {
-    font-size: 100px;
-  }
-  .intro .intro-body .intro-text {
-    font-size: 26px;
-  }
-}
-
-/*this makes above pointless*/
 @media (min-width: 767px) {
   .intro {
     height: 100%;
@@ -187,34 +170,34 @@ p {
     padding: 0;
     background: url(img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
   }
+
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
+
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 
-#textfront{
-  font-size: 36px;
-  margin-bottom: 0px;
+  #textfront {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .navbar-custom a {
+    color: black;
+  }
 }
 
-.navbar-custom a{
-  color: black;
-}
- 
-}
-
-/*wierd white gap on right side was coming from bootstrap row*/
- .row {
+/*white gap on right side was coming from bootstrap row*/
+.row {
   padding-right: 0px;
   margin-right: 0px;
   padding-left: 0px;
   margin-left: 0px;
 }
 
-
-   .btn {
+.btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -240,7 +223,6 @@ p {
 
 /*More Buttons*/
 #moreButton {
-
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -249,188 +231,187 @@ p {
 }
 
 #mButton {
-  vertical-align:middle;display:inline-block;
+  vertical-align: middle;
+  display: inline-block;
 }  
 /*so all formatting off when phone*/
 /*note: i have set the ipad/tablet portrait to kick in only 768px this eems bad practice but i looked into it at at 
 present it is compatible with every brand galaxy etc*/
 /*769*/
-@media (min-width: 991px) { /*this should not be at 991 makes a snap point though 769*/
+@media (min-width: 991px) {
+ /*this should not be at 991 makes a snap point though 769*/
        /*Current Project Title*/
- #CurrentProjectTitle {
-  margin-top: 80px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-                                
- #textback {
-  color: #F5F5F5;
-  z-index: -1;
-  font-size: 75px;
-  position: relative;
-  left: 0px;
-  bottom: 100px;
-  margin-bottom: 0px;
-  margin-top: 35px;
-}
+  #CurrentProjectTitle {
+    margin-top: 80px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
 
-#textfront {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-        
-/*------------------------------------------------------*/
+  #textback {
+    color: #F5F5F5;
+    z-index: -1;
+    font-size: 75px;
+    position: relative;
+    left: 0px;
+    bottom: 100px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+  }
 
-#contact p {
-  color: white;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
- 
-#pic {       
-  width: 406px;
-  height: 406px;
-}
-                
-#text {
-  box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
-  padding-top: 123px;
-  padding-bottom: 123px;
-  padding-left: 463px;
-  padding-right: 58px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 406px;
-}
+  #textfront {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
-#text2 {
-  box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
-  padding-top: 123px;
-  padding-bottom: 123px;
-  padding-left: 58px;
-  padding-right: 463px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 406px;
-}
+  #contact p {
+    color: white;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  #pic {
+    width: 406px;
+    height: 406px;
+  }
+
+  #text {
+    box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
+    padding-top: 123px;
+    padding-bottom: 123px;
+    padding-left: 463px;
+    padding-right: 58px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 406px;
+  }
+
+  #text2 {
+    box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
+    padding-top: 123px;
+    padding-bottom: 123px;
+    padding-left: 58px;
+    padding-right: 463px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 406px;
+  }
 
 /*Contact section*/
-
-
-#contact {
-  margin-top: 236px;
-  background: black;
-  padding-bottom: 560px;
+  #contact {
+    margin-top: 236px;
+    background: black;
+    padding-bottom: 560px;
+  }
 }
-
-} 
 
 @media (min-width: 768px) {
 
-#heading{
-
-  padding-top:15px;
-}
-
-
+  #heading {
+    padding-top: 15px;
+  }
 }
 
 @media (max-width: 767px) {
 
-.intro {
+  .intro {
     height: 100%;
     width: 100%;
     padding: 0;
     background: url(img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
   }
+
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
+
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 
-#textfront{
-  font-size: 20px;/*bootstrap does this anyway take out*/
-  margin-bottom: 0px;
-}
+  #textfront {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
 
-.navbar-custom a{
-  color: black;
-}
- 
-#main{
-margin-left: 5px;
-margin-right: 5px;
-}
-#nameTitle{
-  font-size: 14px;
-}
-#contact{
-  background: black;
-   margin-top: 20px;
-}
-#moreButton{
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-#pic{
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.btn {
-  margin-bottom: 15px
-}
-p{
-color: black; 
-}
-h2{
-  font-weight: 800;
-}
+  .navbar-custom a {
+    color: black;
+  }
 
-h1{
-  margin-bottom: 10px;
-}
+  #main {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
-#contact h2{color: white;};
+  #nameTitle {
+    font-size: 14px;
+  }
+
+  #contact {
+    background: black;
+    margin-top: 20px;
+  }
+
+  #moreButton {
+    margin-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  #pic {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: black;
+  }
+
+  h2 {
+    font-weight: 800;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  #contact h2 {
+    color: white;
+  };
 }
 
 /*Ipad Portrait*/
-@media (width: 768px){
+@media (width: 768px) {
 
-h1{
-  margin-top: 30px;
-  margin-bottom: 20px;
-  /*font-size: 50px; /*this maybe doing nothing*/
-}
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 
-#contact h2{color: white;};
+  #contact h2 {
+    color: white;
+  };
 
-p{
-  font-size: 14px;
-  color: black;                
-}
+  p {
+    font-size: 14px;
+    color: black;
+  }
 
-#pic {
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
+  #pic {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
 
-/*gross repeat take out*/
-.btn {
-  
-  margin-bottom: 15px
-}
+  .btn {
+    margin-bottom: 15px;
+  }
 
-#contact {
-  background: black;
-  margin-top: 20px; 
-}
-
- 
+  #contact {
+    background: black;
+    margin-top: 20px;
+  }
 } 
-
-
-
 
 
 

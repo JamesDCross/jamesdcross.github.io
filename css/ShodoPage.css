@@ -1,111 +1,98 @@
 
-
-#top-instruction{
+#top-instruction {
   margin-top: 20px;
 }
-h1{
+
+h1 {
   font-size: 68px;
-
   margin-bottom: 20px;
 }
 
- .navbar-fixed-top{
-   padding-top: 0px;
- }
-
-
-#main{
-
- margin-top: 86px;
+.navbar-fixed-top {
+  padding-top: 0px;
 }
 
-p{
+#main {
+  margin-top: 86px;
+}
+
+p {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+ 
 
+  #contact {
+    padding-bottom: 600px;
+  }
 
-
-@media (min-width: 768px) { 
-
-#contact{
-  padding-bottom: 600px;
-}
-
- .navbar-custom{
-
-    background: black;
- }
-.navbar-custom a{
-
-  color: white;
-}
-
-
-#contact{
-  background: black;
-   margin-top: 236px
-}
-
- .navbar-custom.top-nav-collapse {
+  .navbar-custom {
     background: black;
   }
 
+  .navbar-custom a {
+    color: white;
+  }
 
+  #contact {
+    background: black;
+    margin-top: 236px;
+  }
 
-#text{
+  .navbar-custom.top-nav-collapse {
+    background: black;
+  }
 
-padding-top: 50px;
- padding-left: 58px;
- padding-right: 58px;
- padding-bottom: 50px;
- box-shadow: none;
-}
+  #text {
+    padding-top: 50px;
+    padding-left: 58px;
+    padding-right: 58px;
+    padding-bottom: 50px;
+    box-shadow: none;
+  }
 
-#pic{
-width: 523px;
-height: 505px;
-
-}
- 
+  #pic {
+    width: 523px;
+    height: 505px;
+  }
 }
 
 /*to deal with index css temporarily, removes "glitch"*/
 @media (min-width: 991px) and (max-width: 1023px) {
-#text{
-padding-bottom: 1680px;
-}
-}
-
-@media (min-width: 1024px) { 
-
-#text{
-padding-bottom: 1680px;
-}
-#contact{
-  padding-bottom: 300px;
+  #text {
+    padding-bottom: 1680px;
+  }
 }
 
+@media (min-width: 1024px) {
+ 
+
+  #text {
+    padding-bottom: 1680px;
+  }
+
+  #contact {
+    padding-bottom: 300px;
+  }
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
+ 
 
-.navbar-custom a{
-color: white;
-}
+  .navbar-custom a {
+    color: white;
+  }
 
+  #text {
+    padding-bottom: 20px;
+  }
 
+  #main {
+    margin-top: 73px;
+  }
 
-#text{
-  padding-bottom: 20px;
-}
-
-#main{
-  margin-top: 73px;
-}
-
-#nameTitle{
-  color: white;
-}
-
+  #nameTitle {
+    color: white;
+  }
 }
