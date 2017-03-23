@@ -1,336 +1,138 @@
 <html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>James D. Cross Portfolio</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Custom Fonts -->
+      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href="css/Index.css" rel="stylesheet">
+      <link href="css/ShodoPage.css" rel="stylesheet">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+         queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file://
+         -->
+      <!-- <[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+         [endif]-->
+   </head>
+   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+         <div class="container" id="heading">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">Menu
+               <i class="fa fa-bars"></i>
+               </button>
+               <a class="navbar-brand page-scroll" href="#page-top">
+               <span class="light" id="nameTitle" >James D. Cross</span>
+               </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+               <ul class="nav navbar-nav" >
+                  <!-- Hidden li included to remove active class from about link when scrolled
+                     up past about section -->
+                  <li class="hidden" >
+                     <a href="#page-top"></a>
+                  </li>
+                  <li>
+                     <a href="...\..\index.html" href="#CurrentProjectTitle">Portfolio</a>
+                  </li>
+                  <li>
+                     <a href="JamesDCrossResume2017.pdf" href="#resume" >Resume</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#contact">Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!--Page Container-->
+      <div class="container" id="main" >
+        <!--Main Panel Text Box-->
+         <div class="row col-12" id="projectpanel" style=" box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04)">
+           <!--Text-->
+            <div class="container-fluid col-1" id="text" >
+               <h1>Shodo</h1>
+               <!--Video-->
+               <div class="embed-responsive embed-responsive-16by9">          
+                  <iframe  src="https://www.youtube.com/embed/ss3DgOvRwS0" width="1054" height="600" frameborder="0" allowfullscreen></iframe>
+               </div>
+               <!--Download Section-->
+               <h2>Download the game for Windows</h2>
+               <a href="ShodoPC.zip">ShodoPC.zip</a>
+               <h2>Play Shodo in your Web Browser</h2>
+               <p>The game is quite large for WebGl and takes about 1 min 20 seconds to load. While it loads
+                  feel free to click back here.Then watch the sweet game play or check out the game 
+                  design doc.
+               </p>
+               <!--WebGl-->
+               <a href="Shodo/index.html" target="_blank">Play (will open in a new tab)</a>
+               <h2>Game design documents</h2>
+               <a href="Shodo/Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab.html" >View</a>
+               <h2>Shodo Post Mortem</h2>
+               <a href="Shodo Post Mortem.pdf">View</a>
+               <!--Controls-->
+               <h2>Controls</h2>
+               <p>It is recommeded that you play Shodo with a controller</p>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>James D. Cross Portfolio</title>
-  <!-- Bootstrap Core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom Fonts -->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+               <b>Controller</b> 
+               <p id ="top-instruction">Kick: B</p>
+               <p >Punch: A</p>
+               <p>UpperCut: A A B</p>
+               <p>Hurricane Kick: B B A</p>
+               <p>Surasshu Slash: B A A B</p>
 
-
-  <link href="css/Index.css" rel="stylesheet">
-  <link href="css/ShodoPage.css" rel="stylesheet">
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-    queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file://
-    -->
-  <!-- <[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    [endif]-->
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <!-- Navigation -->
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation"> 
-    <div class="container" id="heading">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">Menu
-            <i class="fa fa-bars"></i>
-          </button>
-        <a class="navbar-brand page-scroll" href="#page-top">
-          <span class="light" id="nameTitle" >James D. Cross</span>
-        </a>
+               <b>Keyboard</b>
+               <p id ="top-instruction">Kick: X</p>
+               <p>Punch: Z</p>
+               <p>UpperCut: Z Z X</p>
+               <p>Hurricane Kick: X X Z</p>
+               <p>Surasshu Slash: X Z Z X</p>
+            </div>
+         </div>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav" >
-          <!-- Hidden li included to remove active class from about link when scrolled
-            up past about section -->
-          <li class="hidden" >
-            <a href="#page-top"></a>
-          </li>
-          <li>
-            <a href="...\..\index.html" href="#CurrentProjectTitle">Portfolio</a>
-          </li>
-          <li>
-            <a href="JamesDCrossResume2017.pdf" href="#resume" >Resume</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#contact">Contact</a>
-          </li>
-        </ul>
+  
+      <!-- jQuery -->
+      <script src="vendor/jquery/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!-- Plugin JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <!-- Theme JavaScript -->
+      <script src="js/SubPages.js"></script>
+   </body>
+
+   <footer>
+      <!-- Contact Section -->
+      <div class="row content-section text-center" id="contact">
+         <div class="col-lg-8 col-lg-offset-2">
+            <h2 style="color: white">Contact</h2>
+            <p>Email: jamesdcross@gmail.com<br> Mobile: 0210394984</p>
+            <ul class="list-inline banner-social-buttons">
+               <li>
+                  <a href="https://github.com/JamesDCross" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+               </li>
+               <li>
+                  <a href="mailto:jamesdcross@gmail.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+               </li>
+               <li>
+                  <a href="https://twitter.com/JimmyD57584" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+               </li>
+            </ul>
+         </div>
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
-
-  <!-- Intro Header -->
-
-  
-
-
-  <div class="container" id="main" >
-
-  
- <div class="row col-12" id="projectpanel" style=" box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04)">
-
- <div class="container-fluid col-1" id="text" >
-   
-   <h1>Shodo</h1>
-
-         
-
-  <div class="embed-responsive embed-responsive-16by9">          
- <iframe  src="https://www.youtube.com/embed/ss3DgOvRwS0" width="1054" height="600" frameborder="0" allowfullscreen></iframe>
- </div>
-
- <h2>Download the game for Windows</h2>
-  <a href="ShodoPC.zip">ShodoPC.zip</a>
-  <h2>Play Shodo in your Web Browser</h2>
-
-<p>The game is quite large for WebGl and takes about 1 min 20 seconds to load. While it loads
-    feel free to click back here.Then watch the sweet game play or check out the game 
-    design doc.
-   
-    </p>
-
- <a href="Shodo/index.html" target="_blank">Play (will open in a new tab)</a>
-
-   <h2>Game design documents</h2>
-   <a href="Shodo/Assignment · Wiki · Reuben Crimp _ FatNinja · GitLab.html" >View</a>
-
-
-      <h2>Shodo Post Mortem</h2>
-  <a href="Shodo Post Mortem.pdf">View</a>
-
-  <h2>Controls</h2>
-   <p>It is recommeded that you play Shodo with a controller</p>
-<b>Controller</b> 
-
-    <p id ="top-instruction">Kick: B</p>
-    <p >Punch: A</p>
-    <p>UpperCut: A A B</p>
-    <p>Hurricane Kick: B B A</p>
-    <p>Surasshu Slash: B A A B</p>
-
-    <b>Keyboard</b>
-    <p id ="top-instruction">Kick: X</p>
-    <p>Punch: Z</p>
-    <p>UpperCut: Z Z X</p>
-    <p>Hurricane Kick: X X Z</p>
-    <p>Surasshu Slash: X Z Z X</p>
- 
-
-
-
-
-
-  
-
-
-
-
-</div>
-
-
- 
-
-
-
-
-   </div>
-
-   
-
-
-</div>
-
-
-
-
-
-
-<!--
-      <div class="  col-8 " id="text">
-        <h2>Movie Organizer</h2>
-        <p>A windows 10 App that organizes your movie collection. The app will be able to order your movies by genre, score
-          and many other variables you can choose from. The UI will display each movie with it’s movie poster. Cast,trailers,background
-          wallpapers will also be available.
-        </p>
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <a href="...\..\MovieOrganizer.html" class="btn btn-link" id="moreButton">More</button></a>
-      </div>
-
-     
-
-    </div>
--->
-
-<!--
-<style>
-
-/*dif*/
-#top-instruction{
-  margin-top: 20px;
-}
-h1{
-  font-size: 68px;
-  /*dif*/
-  margin-bottom: 20px;
-}
-
- .navbar-fixed-top{
-   padding-top: 0px;
- }
-
-
-#main{
-
- margin-top: 86px;
-}
-
-p{
-  margin-bottom: 20px;
-}
-
-
-
-
-@media (min-width: 768px) { 
-
-#contact{
-  padding-bottom: 600px;
-}
-
- .navbar-custom{
-    /*background: #2d78cc;*/
-    background: black;
- }
-.navbar-custom a{
-
-  color: white;
-}
-#moLogoImg{
-width:150px;
-}
-
-#contact{
-   /*background: #2d78cc;*/
-    background: black;
-   margin-top: 236px
-}
-
- .navbar-custom.top-nav-collapse {
-    /*padding: 0;*/
-    /*background: #2d78cc;*/
-   background: black;
-  }
-
-
-
-#text{
-
-padding-top: 50px;
- padding-left: 58px;
- padding-right: 58px;
- padding-bottom: 50px;
- box-shadow: none;
-}
-
-#pic{
-width: 523px;
-height: 505px;
-
-}
- 
-}
-
-/*to deal with index css temporarily, removes "glitch"*/
-@media (min-width: 991px) and (max-width: 1023px) {
-#text{
-padding-bottom: 1680px;
-}
-}
-
-@media (min-width: 1024px) { 
-
-#text{
-padding-bottom: 1680px;
-}
-#contact{
-  padding-bottom: 300px;/*note its only at 1280 it doesnt work, so maybe change bakc?*/
-}
-
-
-
-}
-
-@media (max-width: 767px) { 
-
-.navbar-custom a{
-color: white;
-}
-
-#moLogoImg{
-width:100px;
-}
-
-#moLogo{
-
-  padding-top: 20px;
-}
-
-#text{
-  padding-bottom: 20px;
-}
-
-#main{
-  margin-top: 73px;
-}
-
-#nameTitle{
-  color: white;
-}
-
-}
-
-</style>
--->
-
-
-
-<!-- About Section -->
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<!-- Theme JavaScript -->
-<script src="js/SubPages.js"></script>
-</div>
-
-</body>
-
-<footer>
-  <!-- Contact Section -->
-  <div class="row content-section text-center" id="contact">
-    <div class="col-lg-8 col-lg-offset-2">
-      <h2 style="color: white">Contact</h2>
-      <p>Email: jamesdcross@gmail.com<br> Mobile: 0210394984</p>
-      <ul class="list-inline banner-social-buttons">
-        <li>
-          <a href="https://github.com/JamesDCross" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-        </li>
-        <li>
-          <a href="mailto:jamesdcross@gmail.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/JimmyD57584" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
+   </footer>
 </html>
