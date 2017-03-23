@@ -1,18 +1,18 @@
 
 /*got rid of hr but kept the spacing re-format later*/
-hr{
+/*hr{
  display: block;
     height: 1px;
     border: 0;
     border-top: 0px solid #ccc;
     margin: 1em 0;
     padding: 0;
-}
+}*/
 
-#bottom-line {
+/*#bottom-line {
   margin-top: 30px;
   margin-bottom: 44px;
-}
+}*/
 
 a {
   text-decoration: none !important;
@@ -47,6 +47,11 @@ p {
   padding-bottom: 0px;
 }
 
+#conceptpanel {  
+    margin-bottom: 77px;
+    margin-top: 47px;
+  }
+
 /*Tablet Potrait*/
 @media (min-width: 768px) {
  
@@ -61,6 +66,7 @@ p {
 
   #conceptpanel {
     padding: 0px;
+    margin-bottom: 77px;
   }
 
   #conceptpanel:hover img {
