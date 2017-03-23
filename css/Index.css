@@ -3,9 +3,6 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
- 
-
 body {
   width: 100%;
   height: 100%;
@@ -45,7 +42,7 @@ h2 {
   font-weight: bold;
   line-height: 24px;
   text-transform: uppercase;
-    /*-webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: subpixel-antialiased;*/;
 }
@@ -61,6 +58,7 @@ p {
   font-weight: 400;
 }
 
+/*nav-bar*/
 .navbar-custom {
   margin-bottom: 0;
   text-transform: uppercase;
@@ -121,29 +119,8 @@ p {
   color: white;
 }
 
-@media (min-width: 768px) {
- /*768, doesnt seem to effect anything*/
-  .navbar-custom {
-    padding: 20px 0;
-    /*initial navbar border*/
-    /*border-bottom: 1px solid #696969;*/
-    letter-spacing: 1px;
-    background: transparent;
-    -webkit-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
-    -moz-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
-    /*changed navbar fade in speed here*/
-    transition: background 0.1s ease-in-out, padding 0.2s ease-in-out;
-    letter-spacing: 1px;
-  }
-
-  .navbar-custom.top-nav-collapse {
-    padding: 0;
-    background: white;
-  }
-}
-
 .intro {
-  display: table;
+  /*display: table;*/
   width: 100%;
   height: auto;
   text-align: center;
@@ -155,6 +132,7 @@ p {
   -o-background-size: cover;
 }
 
+
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
@@ -163,31 +141,8 @@ p {
   font-size: 18px;
 }
 
-@media (min-width: 767px) {
-  .intro {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    background: url(img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
-  }
 
-  .intro .intro-body .brand-heading {
-    font-size: 100px;
-  }
 
-  .intro .intro-body .intro-text {
-    font-size: 26px;
-  }
-
-  #textfront {
-    font-size: 36px;
-    margin-bottom: 0px;
-  }
-
-  .navbar-custom a {
-    color: black;
-  }
-}
 
 /*white gap on right side was coming from bootstrap row*/
 .row {
@@ -234,14 +189,91 @@ p {
   vertical-align: middle;
   display: inline-block;
 }  
-/*so all formatting off when phone*/
-/*note: i have set the ipad/tablet portrait to kick in only 768px this eems bad practice but i looked into it at at 
-present it is compatible with every brand galaxy etc*/
-/*769*/
+
+
+/*Tablets*/
+@media (min-width: 768px) {
+
+ .intro {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+
+  #textfront {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .navbar-custom a {
+    color: black;
+  }
+
+  .navbar-custom {
+    padding: 20px 0;
+    /*initial navbar border*/
+    /*border-bottom: 1px solid #696969;*/
+    letter-spacing: 1px;
+    background: transparent;
+    -webkit-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out, padding 0.2s ease-in-out;
+    /*changed navbar fade in speed here*/
+    transition: background 0.1s ease-in-out, padding 0.2s ease-in-out;
+    letter-spacing: 1px;
+  }
+
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: white;
+  }
+
+  #heading {
+    padding-top: 15px;
+  }
+
+}
+
+/*
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    
+    /*background: url(img/intro-bg-mobile.jpg) no-repeat fixed center scroll;
+  }
+
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+
+  #textfront {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .navbar-custom a {
+    color: black;
+  }
+}
+*/
+
+/*Desktop*/
+/*moved this back from 1280px to make the transitions smoother for resizing window */
 @media (min-width: 991px) {
- /*this should not be at 991 makes a snap point though 769*/
-       /*Current Project Title*/
-  #CurrentProjectTitle {
+    #CurrentProjectTitle {
     margin-top: 80px;
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -303,13 +335,16 @@ present it is compatible with every brand galaxy etc*/
   }
 }
 
+/*
 @media (min-width: 768px) {
 
   #heading {
     padding-top: 15px;
   }
 }
+*/
 
+/*Phones*/
 @media (max-width: 767px) {
 
   .intro {
@@ -382,6 +417,8 @@ present it is compatible with every brand galaxy etc*/
 }
 
 /*Ipad Portrait*/
+
+/*
 @media (width: 768px) {
 
   h1 {
@@ -412,6 +449,7 @@ present it is compatible with every brand galaxy etc*/
     margin-top: 20px;
   }
 } 
+*/
 
 
 

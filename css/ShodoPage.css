@@ -20,6 +20,7 @@ p {
   margin-bottom: 20px;
 }
 
+/*Tablet Potrait*/
 @media (min-width: 768px) {
  
 
@@ -58,13 +59,14 @@ p {
   }
 }
 
-/*to deal with index css temporarily, removes "glitch"*/
+/*override index css changing the text padding size*/
 @media (min-width: 991px) and (max-width: 1023px) {
   #text {
     padding-bottom: 1680px;
   }
 }
 
+/*Tablet Landscape*/
 @media (min-width: 1024px) {
  
 
@@ -77,6 +79,7 @@ p {
   }
 }
 
+/*Phones*/
 @media (max-width: 767px) {
  
 

@@ -16,14 +16,14 @@ hr{
 
 a {
   text-decoration: none !important;
-/*should add everywhere*/;
+/*should add everywhere, hyperlink not highlight*/
 }
 
 h1 {
   font-size: 68px;
   margin-bottom: 20px;
   text-transform: none;
-/*override for small i*/;
+/*override for small i*/
 }
 
 h2 {
@@ -47,6 +47,7 @@ p {
   padding-bottom: 0px;
 }
 
+/*Tablet Potrait*/
 @media (min-width: 768px) {
  
   #instructions {
@@ -106,13 +107,13 @@ p {
   }
 }
 
-/*to deal with index css temporarily, removes "glitch"*/
+/*override index css changing the text padding size*/
 @media (min-width: 991px) and (max-width: 1023px) {
   #text {
     padding-bottom: 1840px;
   }
 }
-
+/*Tablet Landscape*/
 @media (min-width: 1024px) {
  
 
@@ -124,7 +125,7 @@ p {
     padding-bottom: 300px;
   }
 }
-
+/*Phones*/
 @media (max-width: 767px) {
  
 

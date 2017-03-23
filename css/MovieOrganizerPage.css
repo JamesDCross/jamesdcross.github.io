@@ -16,6 +16,7 @@ p {
   margin-bottom: 20px;
 }
 
+/*Tablet Potrait*/
 @media (min-width: 768px) {
 
   #topTitle {
@@ -63,13 +64,14 @@ p {
   }
 }
 
-/*to deal with index css temporarily, removes "glitch"*/
+/*override index css changing the text padding size*/
 @media (min-width: 991px) and (max-width: 1023px) {
   #text {
     padding-bottom: 1190px;
   }
 }
 
+/*Tablet Landscape*/
 @media (min-width: 1024px) {
  
   #moLogoImg {
@@ -87,7 +89,6 @@ p {
 
   #contact {
     padding-bottom: 300px;
-/*note its only at 1280 it doesnt work, so maybe change bakc?*/;
   }
 }
 
