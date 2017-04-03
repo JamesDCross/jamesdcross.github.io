@@ -83,11 +83,28 @@
                   -->
                <div class "col-1">
                   <h2>Windows Store</h2>
-                  <a href="https://www.microsoft.com/store/apps/9nfqlgwt2d5w">Link to Movie Organizer App</a>
+                  <a href="https://www.microsoft.com/store/apps/9nfqlgwt2d5w">Link to the App</a>
                   <p style="margin-top: 10px;">You may notice the author is "WolfStudioSoftware" this is to provide me with some online anonimity and 
-                    is also a potential future company of mine. 
-                     Note that this is still an early test build version 0.1.4
+                    is also a potential future company of mine.</br>
+                    
+                    
                   </p>
+               </div>
+
+                 <div class "col-1">
+                  <b>Version 0.1.4</b>
+                 <p>
+                      This is a simple version of the app that parses the movie file titles in a selected folder. Then it displays plot,release year and a movie poster
+                      acquired from calls to the MovieDB Web API.
+                 </p>
+               </div>
+
+                 <div class "col-1">
+                  <b>Version 0.1.5 ( awaiting Appstore approval )</b>
+                 <p>
+                      The app can now save so it only needs to parse titles in a folder once. The movies can now be sorted by genre. I have customized the genre categories 
+                      that MovieDB provides to be less broad.
+                 </p>
                </div>
                <!--note: the sideload option will have to be on in windows settings-->
                <!--
@@ -102,7 +119,7 @@
                <p>The app parses the movie file titles in the folder it is directed to, using regex and other techniques. The results of
                   the parsing are used to make calls out to the MovieDB Web API <a href="https://developers.themoviedb.org">https://developers.themoviedb.org</a>    
                   The JSON received is then deserialized into instances of classes for use in C#. Databinding is then used to establish
-                  the connection between the call results and the UWP UI.
+                  the connection between the call results and the UWP UI (coded in XAML).
                </p>
                <h2>Movie Oragnizer Example Project</h2>
                <p>Because this project will be for sale on the Windows App Store I have ommitted certain data from this example project.</p>
